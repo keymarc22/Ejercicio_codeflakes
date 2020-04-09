@@ -25,5 +25,8 @@ function cadena(){
 		}
 		contador = 0;	
 	}
+	if(repetidos.length < 1){
+			resultado.innerHTML = ("No se repiten caracteres")
+		}
 	console.log(repetidos)
 }
