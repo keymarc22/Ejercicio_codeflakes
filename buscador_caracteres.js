@@ -3,10 +3,13 @@ boton.addEventListener("click", cadena)
 var contador = 0
 var repetidos = []
 
+
 function cadena(){
 	var cadena = document.getElementById("ingresar").value.trim()
 	var answer = document.getElementById("resultado").innerHTML
 	var caracteres = cadena.split("")
+	var identify
+	var identificador = "La letra "
 	var total_caracteres = caracteres.length
 
 
@@ -21,12 +24,17 @@ function cadena(){
 		
 		if(contador > 1 && repetidos.indexOf(caracteres[i]) == -1){
 			repetidos.push(caracteres[i])
-			resultado.innerHTML += ("La letra " +  caracteres[i] + " se repite " + contador + " veces <br>")
-		}
+				if(identify = parseInt(repetidos)){
+					identificador = "El numero "
+				}
+			resultado.innerHTML += (identificador +  caracteres[i] + " se repite " + contador + " veces <br>")
+			}
+	
 		contador = 0;	
 	}
 	if(repetidos.length < 1){
 			resultado.innerHTML = ("No se repiten caracteres")
 		}
+	
 	console.log(repetidos)
 }
